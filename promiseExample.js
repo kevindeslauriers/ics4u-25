@@ -9,7 +9,7 @@ function fetchDataPromise(x) {
         setTimeout(() => {
             const data = { user: 'John Doe', value: x };
             resolve(data);
-        }, 3000);
+        }, 10);
     });
 }
 
@@ -23,10 +23,15 @@ fetchDataPromise(5)
     });
 
 // Test promise with invalid x
-fetchDataPromise(-3)
+
+fetchDataPromise(9, yum)
     .then(result => {
-        console.log('Promise Success:', result);
+        console.log('Promise Success:', yum);
     })
     .catch(error => {
         console.log('Promise Error:', error.message);
     });
+
+
+
+
